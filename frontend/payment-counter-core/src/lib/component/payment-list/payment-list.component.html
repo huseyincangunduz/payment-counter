@@ -1,0 +1,10 @@
+<h1 class="p-card-title">Satışlar</h1>
+
+<div style="padding: 10px">
+  <ng-container *ngFor="let payment of payments">
+    <payment-counter-payment-item
+      [payment]="payment"
+    ></payment-counter-payment-item>
+  </ng-container>
+  <button pButton label="Yeni ekle" (click)="showAddDialog()"></button>
+</div>

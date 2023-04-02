@@ -1,0 +1,29 @@
+<div *ngIf="payment">
+  <div>
+    <label for="price">Fiyat</label>
+    <p-inputNumber
+      inputId="price"
+      mode="currency"
+      currency="TRY"
+      [(ngModel)]="payment.price"
+      locale="tr-tr"
+      placeholder="Fiyat"
+      ariaLabel="Fiyat"
+    ></p-inputNumber>
+  </div>
+  <div>
+    <label for="soldItem">Satılan ürün</label>
+    <input
+      pInputText
+      inputId="soldItem"
+      mode="currency"
+      currency="TRY"
+      [(ngModel)]="payment.soldItem"
+      locale="tr-tr"
+      placeholder="Örn: Çikolata"
+    />
+  </div>
+  <div style="margin-top: 10px">
+    <button pButton label="Gönder" (click)="sendPrice()"></button>
+  </div>
+</div>
